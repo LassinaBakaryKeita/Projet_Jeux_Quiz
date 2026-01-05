@@ -15,17 +15,18 @@ Un projet de quiz interactif multi-matières et multi-niveaux développé en HTM
 ## 🛠️ Structure du projet
 
 ```
-QuizMaster/
+PROJET_JEUXQUIZ/
 ├── index.html              # Page d'accueil - sélection de la matière
-├── niveau.html             # Page de sélection du niveau de difficulté
-├── formulairequiz.html     # Page principale du quiz
-├── style.css              # Feuille de style principale
-├── images/                # Dossier contenant les icônes
+├── style.css               # Feuille de style principale
+├── images/                 # Dossier contenant les icônes
 │   ├── logo-d'acceuil.png
 │   └── fleche-gauche.png
-└── les-fichiers-js/       # Dossier JavaScript
-    ├── basededonnee.js    # Base de données des questions
-    └── script.js         # Logique principale de l'application
+├── les-fichiers-js/        # Dossier JavaScript
+│   ├── basededonnee.js    # Base de données des questions
+│   └── script.js          # Logique principale de l'application
+└── les-fichiers-html/      # Dossier des pages HTML supplémentaires
+    ├── niveau.html        # Page de sélection du niveau de difficulté
+    └── formulairequiz.html # Page principale du quiz
 ```
 
 ## 📚 Technologies utilisées
