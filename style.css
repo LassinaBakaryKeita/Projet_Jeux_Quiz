@@ -1,0 +1,300 @@
+/* =========================
+   RESET CSS GLOBAL
+   ========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hauteur complète pour permettre le footer collé en bas */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* =========================
+   STYLE GLOBAL DU BODY
+   ========================= */
+body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8fafc; /* Fond clair */
+    color: #2C3E50; /* Couleur principale du texte */
+    display: flex;
+    flex-direction: column; /* Permet header / main / footer en colonne */
+}
+
+/* Le main prend tout l’espace disponible */
+main {
+    flex: 1;
+}
+
+/* =========================
+   HEADER & FOOTER
+   ========================= */
+footer ,
+header{
+    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 10vh;
+}
+
+/* Style spécifique au header */
+header {
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3498DB;
+}
+
+/* Style spécifique au footer */
+footer {
+    border-top: 3px solid #3498DB;
+    margin-top: auto; /* Force le footer à rester en bas */
+}
+
+/* =========================
+   ICONES & LIENS
+   ========================= */
+a img{
+    width: 95px;
+    height: 55px;
+    filter: brightness(0) invert(1); /* Icônes blanches */
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol des icônes */
+a img:hover {
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+    transform: scale(1.1);
+}
+
+/* =========================
+   MENU HEADER
+   ========================= */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Centre le logo principal */
+.menu a:first-child {
+    margin: 0 auto;
+}
+
+/* =========================
+   TITRES
+   ========================= */
+h2,
+h3{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #2C3E50;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Effet dégradé pour h2 */
+h2 {
+    background: linear-gradient(135deg, #3498DB 0%, #9B59B6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* =========================
+   BOUTONS (MATIÈRES & NIVEAUX)
+   ========================= */
+.conteneur1 button{
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: 250px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Effet hover des boutons */
+.conteneur1 button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* Couleurs par matière */
+.conteneur1 button:nth-child(1) {
+    background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+}
+.conteneur1 button:nth-child(2) {
+    background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);
+}
+.conteneur1 button:nth-child(3) {
+    background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+}
+.conteneur1 button:nth-child(4) {
+    background: linear-gradient(135deg, #F39C12 0%, #D35400 100%);
+}
+.conteneur1 button:nth-child(5) {
+    background: linear-gradient(135deg, #27AE60 0%, #229954 100%);
+}
+
+/* Conteneur vertical des boutons */
+.conteneur1{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+/* =========================
+   PROPOSITIONS (QUIZ)
+   ========================= */
+.conteneur2{
+  display: flex;
+  gap:5px;
+  transition: all 0.3s ease;
+}
+
+.conteneur2:hover {
+    cursor: pointer;
+    border-color: #3498DB;
+    background: #f0f8ff;
+    transform: translateX(5px);
+}
+
+/* =========================
+   FORMULAIRE QUIZ
+   ========================= */
+form{
+    width: 50vh;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 45px rgba(52, 152, 219, 0.15);
+}
+
+/* Boutons Confirmer & Partager */
+#confirmer,
+#btnPartager{
+  width: 25%;
+  height: 7%;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+  color: white;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Hover boutons */
+#confirmer:hover,
+#btnPartager:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, #2980B9 0%, #2471A3 100%);
+}
+
+/* Centrage du formulaire */
+.conteneur3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   POPUP DE PARTAGE
+   ========================= */
+.popupBackground {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup {
+    background: white;
+    padding: 25px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    animation: popupAnim 0.3s ease;
+}
+
+/* Animation popup */
+@keyframes popupAnim {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Champs du popup */
+.popup input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.popup button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #3498DB, #2980B9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Mobile */
+@media screen and (max-width:480px) {
+    h2{
+        font-size: 1em;
+    }
+    form{
+        width: 40vh;
+    }
+}
+
+/* Tablettes */
+@media screen and (min-width:481px) and (max-width:1024px) {
+    h2{
+        font-size: 1.1em;
+    }
+    form{
+         gap:70px;
+    }
+}

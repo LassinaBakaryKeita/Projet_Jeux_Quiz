@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+
+    <!-- Adaptation du site aux écrans (responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page -->
+    <title>QuizMaster - Quiz</title>
+
+    <!-- Feuille de style principale -->
+    <link href="../style.css" rel="stylesheet">
+
+    <!-- Polices Google utilisées dans le site -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Base de données des questions (chargée avant le script principal) -->
+    <script src="../les-fichiers-js/basededonnee.js" defer></script>
+
+    <!-- Script principal qui gère la logique du quiz -->
+    <script src="../les-fichiers-js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- En-tête avec les boutons de navigation -->
+    <header>
+        <div class="menu">
+
+            <!-- Lien vers la page d'accueil -->
+            <a href="../index.html">
+                <img src="../images/logo-d'acceuil.png" alt="logo-d'acceuil" title="home">
+            </a>
+
+            <!-- Lien de retour vers la page de choix du niveau -->
+            <a href="niveau.html">
+                <img src="../images/fleche-gauche.png" alt="logo-retour-en-arrière" title="page précédente">
+            </a>
+
+        </div>   
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+
+        <!-- Conteneur du quiz -->
+        <div class="conteneur3">
+
+            <!-- Formulaire principal du quiz -->
+            <form action="" method="post" id="formulairequiz">
+
+                <!-- Affichage du numéro de la question et de l'énoncé -->
+                <p>
+                    <strong>
+                        Question <span id="numerodelaquestion"></span> :
+                        <span id="questionAafficher"></span>
+                    </strong>
+                </p>
+
+                <!-- Conteneur dynamique des propositions (radio buttons) -->
+                <div class="conteneur3-propositions">
+                    <!-- Les propositions seront ajoutées ici via JavaScript -->
+                </div>
+
+                <!-- Bouton pour valider la réponse -->
+                <!-- type="button" pour éviter l'envoi automatique du formulaire -->
+                <button type="button" id="confirmer">Confirmer</button>
+
+            </form>
+        </div>
+
+        <!-- Fenêtre popup de partage du score (cachée par défaut en CSS) -->
+        <div class="popupBackground">
+
+            <div class="popup">
+
+                <!-- Titre du popup -->
+                <div>Partagez votre score</div>
+
+                <!-- Formulaire de partage -->
+                <form novalidate>
+
+                    <!-- Champ nom -->
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" aria-label="Votre nom">
+
+                    <!-- Champ email -->
+                    <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                    <input type="email" id="email" name="email" placeholder="nom@domaine.com" aria-label="Email du destinataire">
+
+                    <!-- Bouton d'envoi -->
+                    <button id="btnEnvoyerMail">Envoyer</button>
+                </form>
+
+                <!-- Zone d'affichage des messages d'erreur -->
+                <span id="ErreurMessage"></span>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2026 QuizMaster | Developpé par Lassina Bakary Keïta </p>
+    </footer>
+
+</body>
+</html>

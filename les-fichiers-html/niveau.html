@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Déclaration du document en HTML5 -->
+<html lang="fr">
+<head>
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+
+    <!-- Règle l’affichage responsive sur tous les écrans -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre affiché dans l’onglet du navigateur -->
+    <title>QuizMaster - Choix du niveau</title>
+
+    <!-- Feuille de style principale -->
+    <link href="../style.css" rel="stylesheet">
+
+    <!-- Importation des polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- 
+        Base de données des questions (matières, niveaux, questions, réponses)
+         Obligatoirement chargée AVANT script.js
+    -->
+    <script src="../les-fichiers-js/basededonnee.js" defer></script>
+
+    <!-- 
+        Script principal :
+        - récupère la matière choisie (localStorage)
+        - gère le clic sur les boutons de niveau
+        - redirige vers formulairequiz.html
+    -->
+    <script src="../les-fichiers-js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- En-tête avec menu de navigation -->
+    <header>
+        <div class="menu">
+
+            <!-- Lien vers la page d’accueil -->
+            <a href="../index.html">
+                <img src="../images/logo-d'acceuil.png"
+                     alt="logo-d'acceuil"
+                     title="home">
+            </a>
+
+            <!-- Bouton retour vers la page précédente -->
+            <a href="../index.html">
+                <img src="../images/fleche-gauche.png"
+                     alt="logo-retour-en-arrière"
+                     title="page précédente">
+            </a>
+
+        </div>   
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+
+        <!-- Titre de la page -->
+        <h3>Veuillez choisir un niveau</h3>
+
+        <!-- 
+            Conteneur des boutons de sélection du niveau
+            Chaque bouton :
+            - possède un id (utilisé dans script.js)
+            - stocke le niveau dans localStorage au clic
+        -->
+        <div class="conteneur1">
+            <button id="niveau-facile-btn" data-matiere="niveaufacile">
+                Niveau: Facile
+            </button>
+
+            <button id="niveau-moyen-btn" data-matiere="niveaumoyen">
+                Niveau: Moyen
+            </button>
+
+            <button id="niveau-difficile-btn" data-matiere="niveaudifficile">
+                Niveau: Difficile
+            </button>
+        </div>    
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2026 QuizMaster | Developpé par Lassina Bakary Keïta </p>
+    </footer>
+
+</body>
+</html>

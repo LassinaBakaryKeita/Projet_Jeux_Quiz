@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Déclaration du type de document : HTML5 -->
+<html lang="fr">
+<head>
+    <!-- Encodage des caractères (accents, caractères spéciaux, etc.) -->
+    <meta charset="UTF-8">
+
+    <!-- Permet un affichage responsive (mobile, tablette, PC) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page (onglet du navigateur) -->
+    <title>Jeux-De-Quiz</title>
+
+    <!-- Fichier CSS principal -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Importation des polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- 
+        Fichier JavaScript contenant toutes les bases de données
+        (questions, propositions, réponses)
+         Il doit être chargé AVANT script.js
+    -->
+    <script src="les-fichiers-js/basededonnee.js" defer></script>
+
+    <!-- 69
+        Fichier JavaScript principal :
+        - gestion des clics
+        - navigation entre pages
+        - stockage dans localStorage
+    -->
+    <script src="les-fichiers-js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+       <p>Testez vos connaissances avec des quiz interactifs par matière et par niveau</p>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+
+        <!-- Texte d'introduction du jeu -->
+        <h2>
+            Bienvenue dans QuizMaster ! <br>
+            Testez vos connaissances en Informatique, Mathématiques, Physique, Chimie et Biologie.<br>
+            Choisissez une matière, sélectionnez un niveau de difficulté et relevez le défi avec 10 questions. <br>
+            À la fin, découvrez votre score, recevez un message d’encouragement et partagez vos résultats avec vos amis.<br>
+            Prêt à montrer vos compétences ?
+        </h2>
+
+        <!-- 
+            Conteneur des boutons de sélection de matière
+            Chaque bouton possède :
+            - un id (utilisé par JavaScript)
+            - un data-matiere (optionnel mais propre)
+        -->
+        <div class="conteneur1">   
+            <button id="informatique-btn" data-matiere="informatique">Informatique</button>
+            <button id="mathematiques-btn" data-matiere="mathematiques">Mathématiques</button>
+            <button id="physique-btn" data-matiere="physique">Physique</button>
+            <button id="chimie-btn" data-matiere="chimie">Chimie</button>
+            <button id="biologie-btn" data-matiere="biologie">Biologie</button>
+        </div>    
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2026 QuizMaster | Developpé par Lassina Bakary Keïta </p>
+    </footer>
+
+</body>
+</html>
